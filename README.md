@@ -4,11 +4,8 @@
 
 int main() {
   try {
-    // Create a database file in the cwd named people, and open a connection to it
-    Database people = Database::createDatabase(".", "people");
-
-    // Open connection to an existing database named addresses in the cwd
-    Database addresses(".\\addresses.db");
+    // Open a database named people located in the current working directory
+    Database people(".\\people.db");
 
     // Execute a statement
     people.execute(R"(
