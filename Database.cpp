@@ -10,26 +10,6 @@ Database::~Database() {
   log("close", return_code);
 }
 
-Database Database::createDatabase(const char *directory_path, const char *file_name) {
-  std::unique_ptr<char[]> file_path = createFilePath(directory_path, file_name);
-  std::ofstream database_file(file_path.get());
-  Database database(file_path.get());
-  return database;
-}
-
-std::unique_ptr<char[]> Database::createFilePath(const char *directory_path, const char *name) {
-  std::unique_ptr<char[]> new_path = std::make_unique<char[]>(getSize(directory_path)+getSize(name)+5);
-  char *tail = new_path.get();
-  tail = concatinate(tail, directory_path);
-  *tail++ = '\\';
-  tail = concatinate(tail, name);
-  *tail++ = '.';
-  *tail++ = 'd';
-  *tail++ = 'b';
-  *tail = '\0';
-  return new_path;
-}
-
 Statement Database::createStatement(const char *sql) {
   Statement statement(connection, sql);
   return statement;
