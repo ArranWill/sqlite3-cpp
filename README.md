@@ -49,8 +49,10 @@ int main() {
     return exception;
   }
 }
+```
 
-// Terminal output
+### Terminal output
+```
 Success: open returned OK
 Success: open returned OK
 Success: prepare returned OK
