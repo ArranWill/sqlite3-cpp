@@ -83,3 +83,4 @@ Success: close returned OK
 # Limitations
 * Information extracted using a select statement is cast to text, which limits how you can interact with the data retrieved
 * BLOB data type not currently supported
+* Execute method always returns a table, even if the statement passed isn't a select query
