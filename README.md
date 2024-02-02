@@ -74,7 +74,7 @@ Success: finalise returned OK
 Success: close returned OK
 ```
 # Features
-* Open an SQL database connection in one line of code
+* Open an SQLite database connection in one line of code
 * Use the execute method to prepare, bind, execute, and finalise a statement in one line of code
 * Create a statement object to reuse the same prepared statement object multiple times
 * Function templates allow zero or more arguments of variable type to be passed to the execute and bind methods
