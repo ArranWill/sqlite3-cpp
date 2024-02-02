@@ -47,4 +47,5 @@ void Statement::bind(Type &&...arguments) {
         throw EXIT_FAILURE;
     }
   }(arguments), ...);
+  log("bind", return_code);
 }
