@@ -44,9 +44,8 @@ int main() {
     // Print table
     Database::print(managers);
     return EXIT_SUCCESS;
-  }
-  catch (int exception) {
-    return exception;
+  } catch (const int EXECPTION) {
+    return EXECPTION;
   }
 }
 
